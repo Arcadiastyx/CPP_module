@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 12:10:40 by inaranjo          #+#    #+#             */
-/*   Updated: 2023/12/08 01:22:57 by inaranjo         ###   ########.fr       */
+/*   Updated: 2023/12/08 11:10:35 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,19 @@
 int main(int ac, char **av)
 {
     if(ac < 2)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl; 
-    
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE * " << std::endl; 
+
     for(int i = 1; i < ac; i++)
     {
         std::string word = av[i];
         for(size_t j = 0; j < word.length(); j++)
-            std::cout << (char)std::toupper(word[j]);
+            std::cout << (char)std::toupper(word[j]); 
         if(i < ac -1)
-            std::cout << " "; 
+            std::cout << " ";
     }
-    std::cout << std::endl; 
-    return 0; 
+    std::cout << std::endl;
+    return 0;
 }
-
-
-
 
 
 
