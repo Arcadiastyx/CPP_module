@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 16:08:09 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/02 17:54:16 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/02 21:44:31 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ class Phonebook
 {
     private:
         Contact _contact[8];
-        int _index; 
-        int _max_data; 
+        unsigned int _index; 
+        unsigned int _max_data; 
             std::string _firstname;
             std::string _lastname;
             std::string _nickname;
             std::string _phonenumber;
 
     public: 
-        Phonebook(){};
+        Phonebook();
         ~Phonebook(){};
 
         void    ft_menu();
