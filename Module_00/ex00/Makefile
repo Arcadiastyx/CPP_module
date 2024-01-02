@@ -6,7 +6,7 @@
 #    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 22:04:04 by inaranjo          #+#    #+#              #
-#    Updated: 2023/12/08 01:14:39 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/02 13:48:14 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,6 @@ YELLOW		=	\e[93;5;226m
 GRAY		=	\e[33;2;37m
 RESET		=	\e[0m
 CURSIVE		=	\e[33;3m
-
-.PHONY: all clean re
 
 all: $(NAME)
 
@@ -42,4 +40,5 @@ fclean:
 
 re: clean all
 
+.PHONY: all clean re
 
