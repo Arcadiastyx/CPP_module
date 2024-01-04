@@ -17,7 +17,7 @@
 
 class Contact
 {
-    private:// <-attributs(varaibles) privé de la classe, stock les infos sur les contacts
+    private:// <-attributs(variables) privé de la classe, stock les infos sur les contacts
         std::string     _first_name;
         std::string     _last_name;
         std::string     _nicke_name;
