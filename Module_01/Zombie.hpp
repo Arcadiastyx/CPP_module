@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:02:30 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/09 12:27:34 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/09 17:46:41 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
-#include <string>
+#include "Zombie.h"
 
-class Zombie: 
+class Zombie
 {
     private: 
-        std::string _name; 
+        std::string _name;
 
-    public: 
-    Zombie(){};
-    ~Zombie(){};
-    
-        void annouce(void);
+    public:
+    Zombie(std::string name);
+    ~Zombie();
+        void    accounce(void);    
 };
 
+Zombie* newZombie(std::string name);
+void    randomChump(std::string name);
 
-
-
-#endif 
+#endif

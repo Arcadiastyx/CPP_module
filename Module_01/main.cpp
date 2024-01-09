@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:21:05 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/09 13:08:12 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/09 17:21:52 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-
-int main(int ac, char **av)
+int main(void)
 {
-    (void)ac; 
-    (void)av;
-    
-    std::string Zombie
+    std::string name = "Zak";
+    std::string name2 = "Jun";
 
-    
+    Zombie zomb1(name);
+    zomb1.accounce();
+
+    Zombie* zomb2 = newZombie(name2);
+    zomb2->accounce();
+    delete zomb2;
+ 
 }

@@ -3,17 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:52:54 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/09 11:57:28 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/09 17:38:25 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME		= Zombie
 	
 CC			= c++
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 OBJDIR = .objFiles
@@ -22,7 +23,7 @@ FILES		= main Zombie newZombie randomChump
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Account.hpp
+HEADER		= Zombie.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
