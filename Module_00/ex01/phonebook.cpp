@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 01:36:01 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/02 21:52:49 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/04 15:33:53 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,30 @@ std::string	ft_max_char(std::string str)
 	return (str);
 }
 
+
+
+/*
+
+initialise l'affichage du tableau de contacts en affichant la première ligne du tableau,
+
+----------------------------------------------------------------------------------------------
+
+Cette boucle for itère à travers les contacts stockés dans le tableau _contact. 
+La variable i est utilisée comme indice pour accéder à chaque contact dans le tableau.
+La condition i < (int)this->_index assure que la boucle ne dépasse pas le nombre de contacts réels stockés dans le tableau.
+
+----------------------------------------------------------------------------------------------
+
+À l'intérieur de la boucle, cette partie du code affiche chaque ligne de contact dans un format tabulaire.
+Chaque colonne est alignée à l'aide de la fonction std::setw(10) pour définir une largeur fixe de 10 caractères pour chaque champ.
+Les données du contact sont extraites à partir des méthodes get de la classe Contact (par exemple, get_first_name()) et affichées à l'écran.
+
+info : setw (stream width) 
+setw est une fonction qui permet de contrôler la largeur d'affichage des données 
+lors de l'utilisation de l'opérateur << pour l'affichage dans C++,
+ce qui est utile pour formater la sortie textuelle de manière lisible et alignée.
+
+*/
 void	Phonebook::ft_show_contacts()
 {
 	std::cout << "|     INDEX|FIRST NAME| LAST NAME|  NICKNAME| PHONENUMBER\n";
@@ -82,6 +106,20 @@ void	Phonebook::ft_show_contacts()
 	}
 }
 
+/*
+Déclare une variable index de type unsigned int pour stocker l'index saisi par l'utilisateur.
+Appelle la fonction ft_show_contacts() pour afficher la liste des contacts disponibles à l'utilisateur.
+Demande à l'utilisateur de saisir un index en affichant le message "Enter The index: ".
+Vérifie si la saisie de l'utilisateur a échoué en utilisant std::cin.fail(). Si cela se produit, cela signifie que l'entrée n'est pas un entier valide.
+Si la saisie échoue, affiche un message d'erreur en rouge indiquant "INDEX INVALID !" et réinitialise la couleur de la console avec "\e[0m".
+Si la saisie est valide, continue à l'étape suivante.
+Vérifie si l'index saisi par l'utilisateur est inférieur à la valeur de _index, qui représente le nombre de contacts stockés.
+Si l'index est valide, affiche les détails du contact correspondant, y compris le prénom, le nom de famille, le surnom et le numéro de téléphone à l'aide des méthodes get de la classe Contact.
+Si l'index est invalide (supérieur ou égal à _index), affiche un message d'erreur en rouge indiquant "INDEX INVALID !".
+Nettoie le flux d'entrée avec std::cin.clear() pour effacer tout drapeau d'erreur éventuel.
+Ignore les caractères restants dans le flux d'entrée jusqu'à la fin de la ligne avec std::cin.ignore(INT_MAX, '\n') pour éviter les problèmes de saisie future.
+
+*/
 void	Phonebook::ft_search()
 {
 	unsigned int index;
