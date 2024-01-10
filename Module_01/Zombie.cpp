@@ -3,32 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:09:10 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/09 17:08:06 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:13:51 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-/*le constructeur cree un obj_Zombie_avec_un_nom*/
+/* cree un obj Zombie avec un nom*/
 Zombie::Zombie(std::string name)
 {
     this->_name = name;
 }
 
-/*le destructeur va tuer l obj_Zombie_avec_un_nom localement*/
+/*setup : destrcut pour affichage de message*/
 Zombie::~Zombie()
 {
-    std::cout << this->_name << ": is dead " << std::endl;
+    std::cout << this->_name << " : is dead...." << std::endl;
 }
 
-/*ce que dis le zombie*/
-void    Zombie::accounce()
+/* le zombie name affiche un message*/
+void   Zombie::annouce()
 {
-    std::cout << this->_name << " : BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << this->_name <<  " : BrainZzzzZZzzZZz...." << std::endl;
+    std::cout << this->_name << " : I will kiLllllLlll youuuuuuuUu !!!\n" << std::endl;
 }
-
-
-
+/* zombie parle */
+void    Zombie::annouce2()
+{
+    std::cout << this->_name <<  " : BrainZzzzZZzzZZz...." << std::endl;
+    std::cout << this->_name << " : MIiaaammm....I will heat you bitch !!!\n" << std::endl;
+    
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:21:05 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/09 17:21:52 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:15:02 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,20 @@
 
 int main(void)
 {
-    std::string name = "Zak";
-    std::string name2 = "Jun";
+    std::string name;
 
-    Zombie zomb1(name);
-    zomb1.accounce();
+    std::cout << " ENTER a Zombie Name : ";
+    std::cin >> name;
+    std::cout << " Zombie : " << name << " , Will be add to the STACK \n" << std::endl;
+    Zombie  zomb1(name);
+    zomb1.annouce();
 
-    Zombie* zomb2 = newZombie(name2);
-    zomb2->accounce();
+    std::cout << " ENTER a Zombie Name : ";
+    std::cin >> name;
+    std::cout << " Zombie : " << name << std::setw(10) << " , Will be add to the HEAP\n" << std::endl;
+    Zombie* zomb2 = newZombie(name);
+    zomb2->annouce2();
     delete zomb2;
- 
+    return 0;
+
 }
