@@ -3,35 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:43 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/11 18:22:52 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/11 19:39:00 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sed.hpp"
 
-/*
-    le fichier 1 doit s ouvrir = [filename]
-    avec les informations de la string 1 = [filename] + [str1]
-    avec la fonction .replace(?)
-    les informations de la string 2 sont ovewrite sur le file
-    donc au final on a que les info de la string 2 dans le fichier 
-    [filename] = [str2]
-    
-*/
-
-int main(int ac, char **av)
+int main(int argc, char* argv[]) 
 {
-    if (ac != 4) {
-        std::cerr << "Usage: " << av[0] << " <filename> <string_to_replace> <replacement_string>" << std::endl;
+    if (argc != 4)
+    {
+        std::cerr << argv[0] << " <filename> <find string> <replace string>" << std::endl;
         return 1;
     }
-    
-    Sed sed(av[1], av[2], av[3]);
-    sed.replace();
+    Sed file(argv[1], argv[2], argv[3]);
+    file.replace();
 
-    
     return 0;
 }
