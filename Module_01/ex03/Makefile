@@ -6,7 +6,7 @@
 #    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:32:46 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/11 12:34:56 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/11 16:02:00 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main Zombie zombieHorde
+FILES		= main Weapon HumanA HumanB
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
@@ -35,7 +35,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)<- Executable ready.\n$(RESET)"
+	@printf "$(_SUCCESS) $(GREEN)(☞ ゚ ヮ ゚) ☞ Executable ready.\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
@@ -43,11 +43,11 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)
-	@printf "$(YELLOW)    <- Object files removed.$(RESET)\n"
+	@printf "$(YELLOW)    ¯\_(O_o)_/¯ Object files removed.$(RESET)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    <- Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)  ¯\_(x_X)_/¯ Executable removed.$(RESET)\n"
 
 re: fclean all
 
