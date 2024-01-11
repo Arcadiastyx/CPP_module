@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:43 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/11 16:26:39 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/11 16:44:59 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,6 @@ int main(int ac, char **av)
     
     if(ac != 4)
         std::cout << " ERROR : 3 param required -> [filename][str1][str2]" << std::endl;
-    else 
-    {
-        if(av[1] != file)
-            exit
-        open file;
-        copy file
-        
-    }
     
     return 0;
 }
