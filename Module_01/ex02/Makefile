@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 17:57:06 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/10 18:24:38 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/11 12:33:10 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME		= Brain
 	
