@@ -6,7 +6,7 @@
 #    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 16:07:06 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/11 16:08:28 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/11 18:23:27 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main
+FILES		= main Sed
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= 
+HEADER		= Sed.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m

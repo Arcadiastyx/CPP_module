@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:46:07 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/11 16:50:50 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/11 18:22:12 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 class Sed
 {
@@ -24,9 +25,9 @@ class Sed
         std::string _s2;
 
     public:
-    Sed(std::string& filename, std::string& s1, std::string& s2);
+    Sed(const std::string& filename, const std::string& s1, const std::string& s2);
     ~Sed();
-        void    replace(std::string s1, std::string s2);
+        void    replace();
 };
 
 #endif 

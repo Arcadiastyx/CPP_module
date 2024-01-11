@@ -6,11 +6,11 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:43 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/11 16:44:59 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/11 18:22:52 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sed.hpp"
 
 /*
     le fichier 1 doit s ouvrir = [filename]
@@ -24,11 +24,14 @@
 
 int main(int ac, char **av)
 {
-    (void)av;
+    if (ac != 4) {
+        std::cerr << "Usage: " << av[0] << " <filename> <string_to_replace> <replacement_string>" << std::endl;
+        return 1;
+    }
     
-    
-    if(ac != 4)
-        std::cout << " ERROR : 3 param required -> [filename][str1][str2]" << std::endl;
+    Sed sed(av[1], av[2], av[3]);
+    sed.replace();
+
     
     return 0;
 }
