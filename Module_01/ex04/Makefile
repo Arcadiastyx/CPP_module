@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 16:07:06 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/11 18:23:27 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/12 12:37:36 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)(☞ ゚ ヮ ゚) ☞ Executable ready.\n$(RESET)"
+	@printf "$(_SUCCESS) $(GREEN)✅...Executable ready.\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
@@ -43,11 +43,11 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)
-	@printf "$(YELLOW)    ¯\_(O_o)_/¯ Object files removed.$(RESET)\n"
+	@printf "$(YELLOW) ❌...Object files removed.$(RESET)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)  ¯\_(x_X)_/¯ Executable removed.$(RESET)\n"
+	@printf "$(YELLOW) ❌...Executable removed.$(RESET)\n"
 
 re: fclean all
 
