@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 16:08:09 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/02 21:44:31 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:46:46 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Phonebook
             std::string _lastname;
             std::string _nickname;
             std::string _phonenumber;
+            std::string _darkestSecret;
 
     public: 
         Phonebook();

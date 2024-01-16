@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 15:42:17 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/04 15:08:16 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:54:08 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ std::string Contact::get_phone_number()
     return(this->_phone_number);
 }
 
+std::string Contact::get_dark_secret()
+{
+    return(this->_dark_secret);
+}
+
 /* -SET = donne la valeur à...*/
 void    Contact::set_first_name(std::string firstname)
 {
@@ -55,3 +60,7 @@ void Contact::set_phone_number(std::string phonenumber)
     this->_phone_number = phonenumber;
 }
 
+void    Contact::set_dark_secret(std::string dark)
+{
+    this->_dark_secret= dark;
+}

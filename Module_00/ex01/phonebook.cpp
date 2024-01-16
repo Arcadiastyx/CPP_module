@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 01:36:01 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/04 15:33:53 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/16 15:05:56 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,15 @@ void    Phonebook:: get_user_data()
     std::cout << "Last name : ";
     getline(std::cin,_lastname); 
     tmp.set_last_name(_lastname);
-    std::cout << "Nick name : ";
+    std::cout << "Nicke name : ";
     getline(std::cin, _nickname);
     tmp.set_nick_name(_nickname);
-    std::cout << "Phone number ";
+	std::cout << "Phone number : ";
     getline(std::cin, _phonenumber);
     tmp.set_phone_number(_phonenumber);
+    std::cout << "Darkest secret : ";
+    getline(std::cin, _darkestSecret);
+    tmp.set_dark_secret(_darkestSecret);
 
 
 	/*
@@ -93,7 +96,7 @@ ce qui est utile pour formater la sortie textuelle de maniÃ¨re lisible et alignÃ
 */
 void	Phonebook::ft_show_contacts()
 {
-	std::cout << "|     INDEX|FIRST NAME| LAST NAME|  NICKNAME| PHONENUMBER\n";
+	std::cout << "|     INDEX|FIRST NAME| LAST NAME|  NICKNAME| PHONENUMBER | DARKSECRET |\n";
 	for (int i = 0; i < (int)this->_index; i++)
 	{
 		std::cout
@@ -101,7 +104,8 @@ void	Phonebook::ft_show_contacts()
 		<< "|" << std::setw(10) << ft_max_char(_contact[i].get_first_name())
 		<< "|" << std::setw(10) << ft_max_char(_contact[i].get_last_name())
 		<< "|" << std::setw(10) << ft_max_char(_contact[i].get_nick_name()) 
-		<< "|" << std::setw(10) << ft_max_char(_contact[i].get_phone_number()) << "|"
+		<< "|" << std::setw(13) << ft_max_char(_contact[i].get_phone_number())
+		<< "|" << std::setw(12) << ft_max_char(_contact[i].get_dark_secret()) << "|"
 		<< std::endl;
 	}
 }
