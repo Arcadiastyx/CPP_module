@@ -6,7 +6,7 @@
 #    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 12:41:43 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/16 12:51:50 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/16 17:44:46 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main Harl
+FILES		= main Fixed
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
