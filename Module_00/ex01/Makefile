@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/08 01:25:23 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/02 21:42:57 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/18 13:40:39 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
