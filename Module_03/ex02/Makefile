@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 14:14:55 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/18 14:19:24 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/22 16:21:40 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main ClapTrap
+FILES		= main ClapTrap ScavTrap FragTrap
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= ClapTrap.hpp
+HEADER		= ClapTrap.hpp ScavTrap.hpp	FragTrap.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m

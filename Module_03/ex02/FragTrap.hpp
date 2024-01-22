@@ -6,14 +6,14 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:27:06 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/19 15:36:47 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:20:59 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FLAG_TRAP
 # define FLAG_TRAP
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 class FragTrap: public ClapTrap
 {
