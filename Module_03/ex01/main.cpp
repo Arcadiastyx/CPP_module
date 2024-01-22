@@ -3,22 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:18:43 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/18 17:52:34 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:24:00 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main( void )
 {
-    ClapTrap clap("Isaac");
+    ClapTrap    player1("Billy");
+    ClapTrap    player2("Zak");
+    ScavTrap    player3("Jacob");
+    ScavTrap    player4(player3);
     
-    clap.attack("Dude");
-    clap.takeDamage(5);
-    clap.beRepaired(2);
+    std::cout << std::endl;
+    player1.attack("Dud1");
+    player2.attack("Dude2");
+    player3.attack("Dude3");
+    player4.attack("Dude4");
+    player1.attack("Morron1");
+    std::cout << std::endl;
+    player1.takeDamage(20);
+    player2.takeDamage(20);
+    player3.takeDamage(20);
+    player4.takeDamage(20);
+    std::cout << std::endl;
+    player1.beRepaired(10);
+    player2.beRepaired(10);
+    player3.beRepaired(10);
+    player4.beRepaired(10);
+    std::cout << std::endl;
 
-    return EXIT_SUCCESS;
+
+    return 0;
 }

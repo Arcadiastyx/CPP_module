@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:57:15 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/19 15:24:10 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:15:35 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    std::cout << "ScavTrap" << this->_name << "[constructed]" << std::endl;
+    std::cout << LIGHT_BLUE<< "<ScavTrap>"<< RESET <<std::endl;
+    std::cout << GREEN <<this->_name << RESET << " [has beed created]" << std::endl;
 
     this->_hitPoints = 100;
     this->_energyPoints = 50;
@@ -24,18 +25,20 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(ScavTrap const & other) : ClapTrap(other)
 {
-    std::cout << "ScavTrap copy constructor called" << std::endl;
+    std::cout << LIGHT_BLUE<< "<ScavTrap>" << RESET << std::endl;
+    std::cout << GREEN <<  _name << RESET << " [has been CLONED]" << std::endl;
     *this = other;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "ScavTrap destructor called" << std::endl;
+    std::cout << LIGHT_BLUE << "<ScavTrap>" << RESET <<std::endl;
+    std::cout <<  GREEN <<this->_name << RESET << "[Leave the battefield]"<< std::endl;
 }
 
 ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 {
-    std::cout << "ScavTrap assignation operator called" << std::endl;
+    std::cout << YELLOW<< "[ScavTrap assignation operator called]" << RESET <<std::endl;
     if (this != &rhs)
     {
         this->_name = rhs._name;
@@ -48,16 +51,19 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 
 void ScavTrap::guardGate()
 {
-    std::cout << "ScavTrap " << _name << " has entered in Gate keeper mode" << std::endl;
+    std::cout << "ScavTrap> " << _name << " has entered in Gate keeper mode" << std::endl;
 }
 
 void ScavTrap::attack(std::string const & target)
 {
-    if (_energyPoints <= 0 || _hitPoints <= 0)
+   std::cout << VIOLET << target << RESET << " :[appears on the battlefield]" << std::endl;
+    
+    if (_energyPoints <= 0)
     {
-        std::cout << "ScavTrap " << _name << " has no energy to attack!" << std::endl;
-        return ;
+        std::cout << LIGHT_BLUE << "ScavTrap> " << RESET << _name << " is out of energy!" << std::endl;
+        return;
     }
-    std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+    std::cout << LIGHT_BLUE << "ScavTrap> "  << RESET << GREEN << _name << RESET <<" attacks " << VIOLET << target << RESET <<", causing " << RED <<_attackDamage << RESET <<" points of damage!" << std::endl;
     _energyPoints -= 1;
+    std::cout << "EnergyPoint after Attack : " << YELLOW << _energyPoints << RESET <<std::endl;
 }
