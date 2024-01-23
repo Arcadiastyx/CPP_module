@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/17 13:06:55 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/18 16:29:52 by inaranjo         ###   ########.fr        #
+#    Created: 2024/01/18 14:14:55 by inaranjo          #+#    #+#              #
+#    Updated: 2024/01/22 13:58:01 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Fixed
+NAME		= ClapTrap
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main Fixed
+FILES		= main ClapTrap	ScavTrap
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Fixed.hpp
+HEADER		= ClapTrap.hpp	ScavTrap.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
