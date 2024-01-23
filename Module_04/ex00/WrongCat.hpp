@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 12:42:14 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/23 16:39:38 by inaranjo         ###   ########.fr       */
+/*   Created: 2024/01/23 17:37:55 by inaranjo          #+#    #+#             */
+/*   Updated: 2024/01/23 18:11:00 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal  
 {
     public: 
-        Dog();
-        Dog(const Dog &copy);
-        virtual ~Dog();
+        WrongCat();
+        ~WrongCat();
 
-        virtual void makeSound()const;
+        void    makeSound()const;
 };
-
-
 
 #endif

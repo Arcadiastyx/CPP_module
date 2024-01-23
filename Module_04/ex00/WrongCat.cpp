@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 12:41:59 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/23 16:39:42 by inaranjo         ###   ########.fr       */
+/*   Created: 2024/01/23 17:37:41 by inaranjo          #+#    #+#             */
+/*   Updated: 2024/01/23 18:10:20 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() : Animal("Dog")
+WrongCat::WrongCat(): WrongAnimal("WrongCat")
 {
-    std::cout  << ORANGE << "<Dog>"  << RESET << std::endl;
+    std::cout << MAGENTA << "<WrongCat>"  << RESET << std::endl;
     std::cout << "[Default Constructor called] " << std::endl; 
 }
 
-Dog::Dog(const Dog &copy)
+WrongCat::~WrongCat()
 {
-    std::cout  << ORANGE << "<Dog>"  << RESET << std::endl;
-    std::cout << "[copy Constructor called]" << std::endl;
-    *this = copy;
-}
-
-Dog::~Dog()
-{
-    std::cout  << ORANGE << "<Dog>"  << RESET << std::endl;
+    std::cout  << MAGENTA << "<WrongCat>"  << RESET << std::endl;
     std::cout << "[Destructor called]" << std::endl;   
 }
 
-void Dog::makeSound()const
+void    WrongCat::makeSound( void ) const
 {
-    std::cout  << ORANGE << _type << RESET <<  " say :"  << RED << " Wouaf" << RESET << std::endl;
+    std::cout << "Meow!" << std::endl;
 }

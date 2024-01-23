@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:40:12 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/23 12:44:03 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:39:58 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ class Cat : public Animal
     public: 
         Cat();
         Cat(const Cat &copy);
-        ~Cat();
+        virtual ~Cat();
+        Cat &operator=(const Cat &rhs);
+        
+        virtual void    makeSound()const;
     
 };
 
