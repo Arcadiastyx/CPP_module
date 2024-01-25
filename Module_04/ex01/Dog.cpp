@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:41:59 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 15:08:08 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:10:29 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Dog::~Dog()
 
 Dog & Dog::operator=(const Dog &rhs)
 {
-    std::cout << YELLOW << "[Dog assignment operator called]" << RESET << std::endl;
+    std::cout  << YELLOW << "<Dog> " << RESET  << "[Surcharged operator = called]" << std::endl;
     if(this != &rhs)
     {
         _type = rhs._type;

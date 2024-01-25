@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:07:17 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 14:13:38 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:09:22 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ Brain::Brain(std::string type)
 
 Brain::Brain(const Brain &copy)
 {
-    std::cout << YELLOW << "<Brain>"  << RESET << std::endl;
-    std::cout << "copy Constructor called" << std::endl;
+   std::cout  << YELLOW<< "<Brain> " << RESET  << "[has been copy]" << std::endl;
     *this = copy;
 }
 
@@ -41,7 +40,7 @@ Brain::~Brain()
 
 Brain & Brain::operator=(const Brain &rhs)
 {
-    std::cout << RED << "[Brain assignment operator called]" << RESET << std::endl;
+    std::cout  << YELLOW << "<Brain> " << RESET  << "[Surcharged operator = called]" << std::endl;
     if(this != &rhs)
     {
         for(int i = 0; i < 100; i++)

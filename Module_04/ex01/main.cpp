@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:44:07 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 15:10:35 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:19:54 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,16 @@ int main( void )
     
     delete i;
     delete j;
-    
+   
+
+    std::cout <<std::endl;
+    std::cout << "---------------Copy of a Dog and Cat---------------" << std::endl << std::endl;
+    Animal dogA;
+    Cat catA;
+
+    dogA = catA;
+  
+    std::cout << VIOLET <<"[I m the copy type of catA :] " << RESET << RED << dogA.getType() << RESET << std::endl;
+
     return 0;
 }

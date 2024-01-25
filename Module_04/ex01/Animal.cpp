@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:37:15 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 14:54:37 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:14:32 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &rhs)
 {
-    std::cout << YELLOW << "[Animal assignment operator called]" << RESET << std::endl;
+     std::cout  << GREEN<< "<Animal> "  << RESET  << "[surcharged operator = called]" << std::endl;
     if(this != &rhs)
         this->_type = rhs._type;
     return *this;
