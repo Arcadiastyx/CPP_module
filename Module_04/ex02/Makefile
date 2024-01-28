@@ -6,11 +6,11 @@
 #    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 14:14:55 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/22 16:21:40 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/01/25 19:40:16 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ClapTrap
+NAME		= AAnimal
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main ClapTrap ScavTrap FragTrap
+FILES		= main AAnimal Cat Dog WrongAnimal WrongCat Brain
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= ClapTrap.hpp ScavTrap.hpp	FragTrap.hpp
+HEADER		= AAnimal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
