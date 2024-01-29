@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:57:15 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/22 15:15:35 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:09:12 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 
 void ScavTrap::guardGate()
 {
-    std::cout << "ScavTrap> " << _name << " has entered in Gate keeper mode" << std::endl;
+    std::cout << LIGHT_BLUE << "<ScavTrap> " << RESET<< std::endl;
+    std::cout << GREEN << _name << RESET << " [has entered in Gate keeper mode]" << std::endl;
 }
 
 void ScavTrap::attack(std::string const & target)

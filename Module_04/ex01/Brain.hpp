@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:07:30 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 14:13:50 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/28 10:52:04 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Brain : public Animal
     Brain &operator=(const Brain &rhs);
 
     std::string getIdea(int index) const;
+
     
     
 };

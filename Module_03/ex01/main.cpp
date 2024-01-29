@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:18:43 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/22 15:24:00 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:09:35 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int main( void )
     player2.beRepaired(10);
     player3.beRepaired(10);
     player4.beRepaired(10);
+    std::cout << std::endl;
+    player3.guardGate();
     std::cout << std::endl;
 
 

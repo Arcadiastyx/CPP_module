@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:44:07 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/25 18:19:54 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:55:27 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,17 @@ int main( void )
     dogA = catA;
   
     std::cout << VIOLET <<"[I m the copy type of catA :] " << RESET << RED << dogA.getType() << RESET << std::endl;
+
+    std::cout <<std::endl;
+    std::cout << "---------------Animal s making Sounds---------------" << std::endl << std::endl;
+    Animal sound;
+    Dog    sound1;
+    Cat    sound2;
+
+    sound.makeSound();
+    sound1.makeSound();
+    sound2.makeSound();
+    
 
     return 0;
 }
