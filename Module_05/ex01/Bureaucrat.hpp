@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 10:12:28 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/29 13:45:00 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:04:28 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class Bureaucrat
 
         void          incrementGrade();
         void          decrementGrade();
+
+        void        signForm( Form& form );
 
         /* ---------------- Exception Classes ---------------- */
         class GradeTooHighException : public std::exception 
