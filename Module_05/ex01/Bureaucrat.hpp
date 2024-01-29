@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 10:12:28 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/29 14:04:28 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/29 23:59:41 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <exception>
+#include <string>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -26,13 +31,13 @@ class Bureaucrat
         Bureaucrat(const std::string &name, int grade);
         Bureaucrat(const Bureaucrat &cpy);
         ~Bureaucrat();
-        Bureaucrat &operator=(const Bureaucrat &rhs);
+        Bureaucrat &operator=(const Bureaucrat& rhs);
 
         std::string getName() const;
         int         getGrade() const;
 
-        void          incrementGrade();
-        void          decrementGrade();
+        void          UpGrade();
+        void          DownGrade();
 
         void        signForm( Form& form );
 

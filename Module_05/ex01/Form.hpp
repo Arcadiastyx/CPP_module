@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 13:49:57 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/29 14:20:57 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 00:29:38 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define FORM_HPP
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -27,7 +29,6 @@ class Form
     public:
         /*CANONIQUE FORM + ARGUMETS*/
         Form();
-        Form( const std::string& name, int gradeToSign );
         Form( const std::string& name, int gradeToSign, int gradeToExc );
         Form(const Form &cpy);
         ~Form();

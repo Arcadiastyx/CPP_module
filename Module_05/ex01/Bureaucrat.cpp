@@ -6,11 +6,13 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 10:15:29 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/29 11:04:24 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 00:01:08 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+
 
 
 Bureaucrat::Bureaucrat()
@@ -61,18 +63,31 @@ int     Bureaucrat::getGrade() const
     return (this->_grade);
 }
 
-void    Bureaucrat::incrementGrade() 
+void    Bureaucrat::UpGrade()
 {
-    if ( _grade - 1 < 1 )
+    if ( _grade < 1 )
         throw Bureaucrat::GradeTooHighException();
     _grade--;
 }
 
-void    Bureaucrat::decrementGrade()
+void    Bureaucrat::DownGrade()
 {
-    if ( _grade + 1 > 150 )
+    if ( _grade > 150 )
         throw Bureaucrat::GradeTooLowException();
     _grade++;
+}
+
+void    Bureaucrat::signForm( Form& form )
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << "The bureaucrat" << " signed " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << "The bureaucrat" << " cannot sign " << form.getName() << " because " << e.what() << std::endl;
+    }
 }
 
 std::ostream& operator<<( std::ostream& o, const Bureaucrat& rhs )
