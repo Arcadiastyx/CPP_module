@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:14:54 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 15:21:59 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:09:06 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public Form
+class RobotomyRequestForm : public AForm
 {
 private:
     const std::string   _target;

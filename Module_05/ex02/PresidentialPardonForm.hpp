@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:14:49 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 15:20:26 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:06:37 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AForm.hpp"
 
-class PresidentialPardonForm : public Form
+class PresidentialPardonForm : public AForm
 {
 private:
     std::string _target;

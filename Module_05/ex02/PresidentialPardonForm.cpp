@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:14:47 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 15:20:46 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:08:01 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& src
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
-PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& rhs) {
+PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& rhs)
+{
     (void)rhs;
     return *this;
 }
 
-void    PresidentialPardonForm::execute(const Bureaucrat& executor) const {
-    if ( executor.getGrade() > this->getGradeToExecute() )
-        throw Form::GradeTooLowException();
-    else {
+void    PresidentialPardonForm::execute(const Bureaucrat& executor) const 
+{
+    if ( executor.getGrade() > this->getGradeToExc() )
+        throw AForm::GradeTooLowException();
+    else 
         std::cout << _target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
-    }
 }

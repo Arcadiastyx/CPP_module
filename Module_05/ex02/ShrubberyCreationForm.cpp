@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:14:56 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 15:19:26 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:20:37 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,34 +27,24 @@ void    ShrubberyCreationForm::execute( const Bureaucrat& executor ) const
 {
     if ( this->getSigned() == false )
         throw AForm::NotSignedException();
-    else if ( executor.getGrade() > this->getGradeToExecute() ) {
+    else if ( executor.getGrade() > this->getGradeToExc()) {
         throw AForm::GradeTooLowException();
     }
 
     std::ofstream file( this->getName() + "_shrubbery" );
-    file << "                      ___" << std::endl;
-    file << "                _,-'\"\"   \"\"\"\"`--." << std::endl;
-    file << "             ,-'          __,,-- \\" << std::endl;
-    file << "           ,\'    __,--\"\"\"\"dF      )" << std::endl;
-    file << "          /   .-\"Hb_,--\"\"dF      /" << std::endl;
-    file << "        ,\'       _Hb ___dF\"-._,-'" << std::endl;
-    file << "      ,'      _,-\"\"\"\"   \"\"--..__" << std::endl;
-    file << "     (     ,-'                  `." << std::endl;
-    file << "      `._,'     _   _             ;" << std::endl;
-    file << "       ,'     ,' `-'Hb-.___..._,-'" << std::endl;
-    file << "       \\    ,'\"Hb.-\'HH`-.dHF\"" << std::endl;
-    file << "        `--\'   \"Hb  HH  dF\"" << std::endl;
-    file << "                \"Hb HH dF" << std::endl;
-    file << "                 \"HbHHdF" << std::endl;
-    file << "                  |HHHF" << std::endl;
-    file << "                  |HHH|" << std::endl;
-    file << "                  |HHH|" << std::endl;
-    file << "                  |HHH|" << std::endl;
-    file << "                  |HHH|" << std::endl;
-    file << "                  dHHHb" << std::endl;
-    file << "                .dFd|bHb.               o" << std::endl;
-    file << "      o       .dHFdH|HbTHb.          o /" << std::endl;
-    file << "\\  Y  |  \\__,dHHFdHH|HHhoHHb.__Krogg  Y" << std::endl;
-    file << "##########################################" << std::endl;
+        file << "           ^" << std::endl;
+        file << "          ^^^" << std::endl;
+        file << "         ^^^^^" << std::endl;
+        file << "        ^^^^^^^" << std::endl;
+        file << "       ^^^^^^^^^" << std::endl;
+        file << "      ^^^^^^^^^^^" << std::endl;
+        file << "     ^^^^^^^^^^^^^" << std::endl;
+        file << "    ^^^^^^^^^^^^^^^" << std::endl;
+        file << "   ^^^^^^^^^^^^^^^^^" << std::endl;
+        file << "  ^^^^^^^^^^^^^^^^^^^" << std::endl;
+        file << " ^^^^^^^^^^^^^^^^^^^^^" << std::endl;
+        file << "^^^^^^^^^^^^^^^^^^^^^^^" << std::endl;
+        file << "         |||||" << std::endl;
+        file << "         |||||" << std::endl;
     file.close();
 }

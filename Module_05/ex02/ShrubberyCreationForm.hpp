@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:14:58 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 15:18:57 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:10:15 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include "AForm.hpp"
 #include <fstream>
 
-class ShrubberyCreationForm : public Form {
+class ShrubberyCreationForm : public AForm 
+{
 
 private:
     const std::string   _target;
