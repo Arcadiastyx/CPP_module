@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 13:49:57 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 00:29:38 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/30 10:13:18 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ class Form
         bool        getSigned() const;
         int         getGradeToSign() const;
         int         getGradeToExecute() const;
-
+        
+        /*FONCTION MEMBERS*/
         void        beSigned( const Bureaucrat& bureaucrat );
-
 
         /*EXCEPTION CLASS*/
         class GradeTooHighException : public std::exception
