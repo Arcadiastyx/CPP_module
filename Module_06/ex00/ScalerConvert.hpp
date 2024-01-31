@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 09:44:45 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/31 11:29:12 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:20:41 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@
 #define MAGENTA "\033[35m"
 #define LIGHT_ORANGE "\033[38;5;208m"
 #define GRAY "\033[90m"
+
+/*
+    l'utilisation du mot-clé STATIC permet de définir des méthodes de classe :
+    qui sont indépendantes de l'état de l'objet et peuvent être appelées directement sur la classe,
+    SANS avoir besoin de créer des INSTANCES de la classe.
+    Cela peut être pratique pour des fonctions utilitaires ou des opérations globales liées à la classe
+*/
 
 class ScalarConverter
 {
