@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/31 09:42:23 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/31 14:06:46 by inaranjo         ###   ########.fr        #
+#    Created: 2024/01/31 17:25:00 by inaranjo          #+#    #+#              #
+#    Updated: 2024/01/31 17:25:34 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Convert
+NAME		= 
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main ScalerConvert
+FILES		= 
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= ScalerConvert.hpp
+HEADER		= 
 
 #Colors:
 GREEN		=	\e[92;5;118m

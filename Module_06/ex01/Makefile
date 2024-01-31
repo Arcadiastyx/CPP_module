@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/31 09:42:23 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/31 14:06:46 by inaranjo         ###   ########.fr        #
+#    Created: 2024/01/31 14:08:32 by inaranjo          #+#    #+#              #
+#    Updated: 2024/01/31 17:21:39 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Convert
+NAME		= Serialization
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main ScalerConvert
+FILES		= main Serializer
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= ScalerConvert.hpp
+HEADER		= Data.h
 
 #Colors:
 GREEN		=	\e[92;5;118m
