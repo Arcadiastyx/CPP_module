@@ -6,11 +6,11 @@
 #    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/31 17:25:00 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/31 17:25:34 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/02/01 10:03:50 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= 
+NAME		= Base
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= 
+FILES		= main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
