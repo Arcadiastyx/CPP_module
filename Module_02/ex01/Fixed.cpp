@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 02:25:39 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/17 03:58:56 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:34:09 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(): _fixePointValue(0)
+Fixed::Fixed(): _fixePointValue(1)
 {
     std::cout << "Default constructor called" << std::endl;
 }
