@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.h                                             :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 17:20:06 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/31 17:20:14 by inaranjo         ###   ########.fr       */
+/*   Created: 2024/02/01 11:37:24 by inaranjo          #+#    #+#             */
+/*   Updated: 2024/02/01 11:38:04 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_H
-#define DATA_H
+#ifndef DATA_HPP
+#define DATA_HPP
 
-struct Data {
-    int value;
-    // Add other members as needed.
+#include <string>
+
+struct Data
+{
+    int         number;
+    std::string str;
 };
 
 #endif

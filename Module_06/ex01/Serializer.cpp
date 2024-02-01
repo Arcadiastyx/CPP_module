@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 17:20:19 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/31 17:20:26 by inaranjo         ###   ########.fr       */
+/*   Created: 2024/02/01 11:40:05 by inaranjo          #+#    #+#             */
+/*   Updated: 2024/02/01 11:40:44 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Data.h"
-#include <cstdint>
+#include "Serializer.hpp"
 
-class Serializer {
-private:
-    Serializer(); // Private constructor to prevent instantiation
+uintptr_t Serializer::serialize(Data* ptr)
+{
+    return reinterpret_cast<uintptr_t>(ptr);
+}
+    
 
-public:
-    static uintptr_t serialize(Data* ptr) {
-        return reinterpret_cast<uintptr_t>(ptr);
-    }
-
-    static Data* deserialize(uintptr_t raw) {
-        return reinterpret_cast<Data*>(raw);
-    }
-};
+Data* Serializer::deserialize(uintptr_t raw)
+{
+    return reinterpret_cast<Data*>(raw);
+}

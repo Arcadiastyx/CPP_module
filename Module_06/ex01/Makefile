@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/31 14:08:32 by inaranjo          #+#    #+#              #
-#    Updated: 2024/01/31 17:21:39 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/02/01 11:42:50 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Serialization
+NAME		= Serializer
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -22,7 +22,7 @@ FILES		= main Serializer
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Data.h
+HEADER		= Data.hpp Serializer.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
