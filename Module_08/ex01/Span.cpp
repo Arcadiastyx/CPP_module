@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 13:40:33 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/06 19:34:21 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:02:44 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Span::Span(const Span& cpy)
 
 Span::~Span()
 {
-    std::cout << RED << "~" << RESET << std::endl;
+    //std::cout << RED << "~" << RESET << std::endl;
 }
 
 Span& Span::operator=(const Span& rhs)
@@ -99,3 +99,19 @@ int Span::longestSpan()
     return ( *std::max_element( _intContainer.begin(), _intContainer.end() ) - *std::min_element( _intContainer.begin(), _intContainer.end() ) );
 }
 
+void Span::insertRangeN(std::vector<int>::iterator begin, std::vector<int>::iterator end) 
+{
+    for (std::vector<int>::iterator it = begin; it != end; it++)
+    {
+        addNumber(*it);
+    }
+}
+
+
+void Span::printContents() const 
+{
+    std::cout << "Span contents: ";
+    for (std::vector<int>::const_iterator it = _intContainer.begin(); it != _intContainer.end(); ++it) 
+        std::cout << ORANGE << *it << RESET <<" ";
+    std::cout << std::endl;
+}

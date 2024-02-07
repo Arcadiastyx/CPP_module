@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 13:40:37 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/06 19:30:36 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:02:15 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ class Span
         void   addNumber(int n);
         int    shortestSpan();
         int    longestSpan();
-
+        void   insertRangeN(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+        void   printContents() const;
 };
 
 #endif
