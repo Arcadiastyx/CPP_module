@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:35:08 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/12 18:45:12 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/12 19:07:24 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,7 @@ void BitcoinExchange::ReadInput(const std::string &filename)
 {
 	std::ifstream file(filename.c_str());
 	std::string line;
-	std::getline(file, line); // Skip header line
+	std::getline(file, line);
 	
     while (std::getline(file, line))
     {
@@ -174,19 +174,19 @@ void BitcoinExchange::ReadInput(const std::string &filename)
 
 		if (!(ss >> date >> delimiter >> value))
         {
-			std::cerr << "Error: Unable to parse line => " << line << '\n';
+			std::cerr << "Error: Unable to parse line > " << line << '\n';
 			continue;
 		}
 
 		if (delimiter != '|')
         {
-			std::cerr << "Error: Expected '|' delimiter in line => " << line << '\n';
+			std::cerr << "Error: Expected '|' delimiter in line > " << line << '\n';
 			continue;
 		}
 
 		if (!CheckDate(date)) 
         {
-			std::cerr << "Error: Invalid date format in line => " << line << '\n';
+			std::cerr << "Error: Invalid date format in line > " << line << '\n';
 			continue;
 		}
 
@@ -198,12 +198,9 @@ void BitcoinExchange::ReadInput(const std::string &filename)
 		double exchangeRate = GetExchangeRate(date);
 		if (exchangeRate == -1.0) 
         {
-			std::cerr << "Error: No exchange rate available for date => " << date << '\n';
+			std::cerr << "Error: No exchange rate available for date > " << date << '\n';
 			continue;
 		}
-
-		std::cout << date << " => "
-			  << value << " = " << value * exchangeRate
-			  << '\n';
+        std::cout << date << " => "<< value << " = " << value * exchangeRate << '\n';
 	}
 }
