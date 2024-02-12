@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 12:36:01 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 16:23:04 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:18:20 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class AForm
         /*CANONIQUE + ARGUMETS*/
         AForm(const std::string name, int gradeToSign, int gradeToExec);
         AForm(const AForm& cpy);
-        ~AForm();
+        virtual ~AForm();
         AForm& operator=(const AForm& src);
 
         /*ACESSORS*/
