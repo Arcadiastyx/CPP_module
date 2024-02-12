@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
+/*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:29:44 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/01/30 16:31:16 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:19:16 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,20 @@ AForm*   Intern::makeForm( std::string name, std::string target )
         new ShrubberyCreationForm( target )
     };
     
-    for ( int i(0); i < 3; i++ ) {
-        if ( name == formNames[i] ) {
+    AForm* createdForm = nullptr;
+
+    for (int i(0); i < 3; i++)
+    {
+        if (name == formNames[i])
+        {
             std::cout << "Intern creates " << name << std::endl;
-            return forms[i];
+            createdForm = forms[i];
         }
+        else
+            delete forms[i]; // Supprimer les formulaires non utilisés
     }
-    std::cout << "Intern cannot create " << name << " AForm" << std::endl;
-    return nullptr;
+    if (createdForm == nullptr) 
+        std::cout << "Intern cannot create " << name << " AForm" << std::endl;
+
+    return createdForm;
 }
