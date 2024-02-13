@@ -6,12 +6,11 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:35:08 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/13 12:12:31 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/13 13:51:36 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-
 
 /*
     1.Ouverture du fichier, en fesant attention au caractere null /0, si pas ouver err
@@ -56,18 +55,25 @@ BitcoinExchange::BitcoinExchange(const std::string& filename)
             std::cerr << RED <<"[Error: Invalid rate format in database] " << RESET << rate_str << '\n';
             continue;
         }
-        Brates[date] = rate;
+        _Brates[date] = rate;
     }
 }
 
-BitcoinExchange::BitcoinExchange(const std::string& cpy)
+BitcoinExchange::BitcoinExchange(const BitcoinExchange& cpy)
 {
     *this = cpy;
 }
 
 BitcoinExchange::~BitcoinExchange(){}
 
-BitcoinExhange& BitcoinExchange::operator=()
+BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& rhs)
+{
+    if(this != &rhs)
+    {
+        _Brates= rhs._Brates;
+    }
+    return *this;
+}
 
 /*
     but: retourner le taux de change pour une date donnée, 
@@ -100,18 +106,18 @@ c est pour cela qu on peut utiliser first pour la cle et second pour la value
 */
 double BitcoinExchange::GetExchangeRate(const std::string& date)
 {
-    if (Brates.empty())
+    if (_Brates.empty())
         return -1.0;
 
-    std::map<std::string,double>::iterator it = Brates.lower_bound(date);
+    std::map<std::string,double>::iterator it = _Brates.lower_bound(date);
 
-    if (it == Brates.end())
+    if (it == _Brates.end())
        return std::prev(it)->second;
 
     if (it->first == date) 
         return it->second;
         
-    else if (it == Brates.begin())
+    else if (it == _Brates.begin())
         return -1.0;
         
     else 
@@ -160,13 +166,19 @@ bool BitcoinExchange::CheckDate(const std::string& date)
 /*cette fonction verifie que non value ne sorte pas de leur plage de chiffre souhaite*/    
 bool BitcoinExchange::CheckValue(const double& value) 
 {
-	if (value < 0 || value > 1000)
+    if (value < 0)
     {
-		std::cerr << "Error: Value "<< value<< " is not a positive number between 0 and 1000.\n";
-		return false;
-	}
-	return true;
+        std::cerr << "Error: not a positive number." << std::endl;
+        return false;
+    } 
+    else if (value > 1000) 
+    {
+        std::cerr << "Error: too large a number." << std::endl;
+        return false;
+    }
+    return true;
 }
+
 
 void BitcoinExchange::ReadInput(const std::string &filename)
 {
@@ -183,7 +195,7 @@ void BitcoinExchange::ReadInput(const std::string &filename)
 
 		if (!(ss >> date >> delimiter >> value))
         {
-			std::cerr << "Error: Unable to parse line > " << line << '\n';
+			std::cerr << "Error: bad input => " << line << '\n';
 			continue;
 		}
 
