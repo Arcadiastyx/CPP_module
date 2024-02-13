@@ -6,11 +6,12 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:35:08 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/12 19:07:24 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:12:31 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
+
 
 /*
     1.Ouverture du fichier, en fesant attention au caractere null /0, si pas ouver err
@@ -59,6 +60,14 @@ BitcoinExchange::BitcoinExchange(const std::string& filename)
     }
 }
 
+BitcoinExchange::BitcoinExchange(const std::string& cpy)
+{
+    *this = cpy;
+}
+
+BitcoinExchange::~BitcoinExchange(){}
+
+BitcoinExhange& BitcoinExchange::operator=()
 
 /*
     but: retourner le taux de change pour une date donnée, 

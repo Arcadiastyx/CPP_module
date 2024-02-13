@@ -6,7 +6,7 @@
 /*   By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:35:06 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/12 18:42:58 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:11:49 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,18 @@ class BitcoinExchange
     private:
         std::map<std::string, double> Brates;
         double GetExchangeRate(const std::string& date);
+        
+         BitcoinExchange();
+         
+    public:
+        BitcoinExchange(const std::string& filename);//
+        BitcoinExchange(const BitcoinExchange& cpy);//
+        ~BitcoinExchange();//
+        BitcoinExchange& operator=(const BitcoinExchange& rhs);
+
         bool   CheckDate(const std::string& date);
         bool   CheckValue(const double& value);
         void   ReadInput(const std::string &filename);
-
-    public:
-        BitcoinExchange();
-        BitcoinExchange(const std::string& filename);
-        BitcoinExchange(const BitcoinExchange& cpy);
-        ~BitcoinExchange();
-        BitcoinExchange& operator=(const BitcoinExchange& rhs); 
     
 };
 
