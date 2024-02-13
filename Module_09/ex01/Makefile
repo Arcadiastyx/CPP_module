@@ -6,11 +6,11 @@
 #    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 13:57:04 by inaranjo          #+#    #+#              #
-#    Updated: 2024/02/13 13:57:08 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/02/13 14:00:26 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= btc
+NAME		= RPN
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main BitcoinExchange
+FILES		= main RPN
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= BitcoinExchange.hpp
+HEADER		= RPN.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
