@@ -6,15 +6,16 @@
 /*   By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:12:05 by inaranjo          #+#    #+#             */
-/*   Updated: 2024/02/19 12:03:59 by inaranjo         ###   ########.fr       */
+/*   Updated: 2024/02/20 08:28:59 by inaranjo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 
-int	main(int ac, char **av) {
+int	main(int ac, char **av)
+{
 	if (ac < 3)
-		return std::cout << "Error: Usage: ./sort [int sequence]" << std::endl, 1;
+		return std::cout << "[Error-> Need: ./aout [int sequence...]]" << std::endl, 1;
 	
 	std::vector<int>	input;
 	int					nb;
@@ -23,10 +24,10 @@ int	main(int ac, char **av) {
 	for (i = 1; av[i] != NULL; i++) {
 		for (int j = 0; av[i][j] != '\0'; j++)
 			if (!isdigit(av[i][j]))
-				return std::cout << "Error." << std::endl, 1;
+				return std::cout << "[Error]" << std::endl, 1;
 		nb = atoi(av[i]);
 		if (nb < 0)
-			return std::cout << "Error." << std::endl, 1;
+			return std::cout << "[Error]" << std::endl, 1;
 		input.push_back(nb);
 	}
 
