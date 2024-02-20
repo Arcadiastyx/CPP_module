@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inaranjo <inaranjo <inaranjo@student.42    +#+  +:+       +#+         #
+#    By: inaranjo <inaranjo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/08 14:50:23 by inaranjo          #+#    #+#              #
-#    Updated: 2024/02/08 14:50:31 by inaranjo         ###   ########.fr        #
+#    Updated: 2024/02/20 15:30:25 by inaranjo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Span
+NAME		= MutanStack
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR =	.objFiles
 
-FILES		= main Span
+FILES		= main 
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Span.hpp
+HEADER		= MutanStack.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
